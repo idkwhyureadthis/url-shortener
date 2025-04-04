@@ -1,12 +1,12 @@
 -- +goose Up
 CREATE TABLE links(
-    id TEXT NOT NULL,
+    id TEXT PRIMARY KEY,
     refers_to TEXT NOT NULL,
-    created_by INTEGER REFERENCES users(id) NOT NULL,
+    created_by BIGINT REFERENCES users(id),
     visits BIGINT NOT NULL DEFAULT 0,
     created_at DATE NOT NULL DEFAULT CURRENT_DATE
 );
 
 
 -- +goose Down
-DROP TABLE links
+DROP TABLE links;

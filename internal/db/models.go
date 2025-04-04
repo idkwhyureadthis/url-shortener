@@ -11,15 +11,7 @@ import (
 type Link struct {
 	ID        string
 	RefersTo  string
-	CreatedBy int32
+	CreatedBy int64
 	Visits    int64
 	CreatedAt time.Time
-}
-
-type User struct {
-	ID               int32
-	Login            string
-	Name             string
-	CryptedPassword  string
-	SubscriptionType string
 }
